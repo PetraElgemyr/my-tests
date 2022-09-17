@@ -96,14 +96,13 @@ aside {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 
 form {
     background-color: rgba(173, 185, 202, 0.726);
     padding: 5%;
 }
-
-
 
 p, h2, h3 {
     margin: 4%;
@@ -114,6 +113,22 @@ p, h2, h3 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 2%;
+}
+
+#contact {
+    margin-bottom: 0;
+}
+
+.find-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.find {
     margin: 2%;
 }
 
@@ -196,10 +211,8 @@ button {
         font-size: 40pt;
         margin-left: 4%;
     }
-    .find, #contact {
-        margin: 5px;
-        padding: 5px;
+    footer {
+        font-size: 16pt;
     }
-
 
 }
