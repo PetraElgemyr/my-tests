@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(45deg);
+    }
+    to {
+      transform: rotate(225deg);
+    }
+  }
+  
+.heart {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform: rotate(45deg);   /*Detta gör att lådan/hjärtat står upprätt*/
+    background-color:darkturquoise; 
+    /* animation: rotate 2s linear infinite; */
+    animation: heartbeat 1s linear infinite;
+}
+
+.heart::before, .heart::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: maroon;
+    border-radius: 50%;
+}
+.heart::before {
+    left: -75px;
+}
+.heart::after {
+    top: -75px;
+}
+
+@keyframes heartbeat {
+    0% {transform: rotate(45deg) scale(0.8);}
+    5% {transform:rotate(45deg) scale(0.9);}
+    10% {transform:rotate(45deg) scale(0.8);}
+    15% {transform:rotate(45deg) scale(1);}
+    50% {transform:rotate(45deg) scale(0.8);}
+    100% {transform:rotate(45deg) scale(0.8);}
+}
