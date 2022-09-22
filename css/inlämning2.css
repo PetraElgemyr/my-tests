@@ -1,0 +1,258 @@
+.container-fluid {
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 600;
+    scroll-behavior: smooth;
+    background-color:rgba(164, 148, 181, 0.365);
+
+}
+
+h2 {
+    display: inline;
+    font-weight: 600;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+}
+
+.drop-container {
+    display: none;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    padding-top: 5%
+}
+
+img.me {
+    margin: 5%;
+    width: 33%;
+    border-radius: 20px;
+}
+
+.future-text {
+    animation: appear 1s linear;
+}
+
+.frontend-text {
+    animation: appear 2.5s linear;
+}
+
+@keyframes appear {
+        from {color: rgba(255, 255, 255, 0);}
+        to {color: rgb(0, 0, 0, 1);}  
+}
+
+article > #home > a, .button {
+    background-color: rgba(53, 32, 63, 0.7);
+    border-radius: 30px;
+    margin: 2%;
+    padding: 4%;
+    color: white;
+    text-decoration: none;
+}
+
+article > #home > a:hover,
+.button:hover{
+    background-color:rgba(74, 44, 89, 0.500) ;
+    color:black;
+}
+
+#about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+
+.about-box {
+    width: 90%;
+    background-color: rgba(22, 22, 22, 0.674);
+    border-radius: 20px;
+    font-size: 10pt;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2%;
+}
+
+#contact > article > p {
+    font-size: 10pt;
+}    
+
+.about > p , .education > p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-indent: 15px;
+}
+
+.orange {
+    color: rgba(221, 161, 100, 0.904);
+}
+
+.blue {
+    color: rgba(173, 221, 253, 0.947);
+}
+
+.green {
+    color:rgba(209, 243, 194, 0.897);
+}
+
+#contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#contact > article {
+    margin-top: 0%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alien {
+    width: 20%;
+    animation: moving 10s linear infinite;
+    margin: 5%;
+}
+
+@keyframes moving {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(80%, 0);}
+    50% {transform: translate(0, 0)}
+    75% {transform: translate(-80%, 0);}
+    100% {transform: translate(0, 0);}    
+}
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+footer > a {
+    margin: 5%;
+}
+
+.fa-github {
+    color: rgb(12, 12, 12);
+    font-size: 20pt;
+    margin: 2%;
+}
+
+.fa-linkedin {
+    color:  #0072b1;
+    font-size: 20pt;
+    margin: 2%;
+}
+
+@media screen and ( min-width: 600px) {
+    #home {
+        height: auto;
+    }
+
+    img.me {
+        width: 25%;
+    }
+}
+
+@media screen and ( min-width: 768px ) {
+
+    header {
+        justify-content:unset;
+        align-items:unset;
+        position: relative;
+    }
+
+    h2 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+    }
+   
+    .drop-container {
+        display: unset;
+        margin-left: 5%;
+    }
+
+    .dropdown {
+        position: relative;
+        left: 10%;
+    }
+
+    .btn-secondary {
+        background-color: rgba(53, 32, 63, 0.7);
+    }
+
+    #contact > article {
+        margin-top: 10%;
+    }
+
+    a.button {
+        display: none;
+    }
+
+    .about-box {
+        font-size: 12pt;
+    }
+
+    #contact > article > p {
+        font-size: 12pt;
+    }  
+    
+    .fa-github, .fa-linkedin {
+        font-size: 25pt;
+        transition: transform 0.1s; 
+        margin-top: 0;
+    }
+
+    .fa-github:hover {
+        transform: scale(1.8);
+    }
+
+    .fa-linkedin:hover {
+        transform: scale(1.8);
+    }
+}
+
+@media screen and ( min-width: 1024px) {
+    a.first-button {
+        font-size: 15pt;
+    }
+
+    .about-box {
+        font-size: 17pt;
+    }
+
+    #contact > article > p {
+        font-size: 17pt;
+    }  
+}
+
+/* color:#6f5f6f ;
+#2e2b33 
+#473c4f 
+rgba(159, 142, 177, 0.559)
+*/
