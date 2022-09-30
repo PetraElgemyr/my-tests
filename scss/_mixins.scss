@@ -1,0 +1,27 @@
+@mixin centering {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@mixin picture {
+    width:65%;
+    border-radius: 50%;   
+    box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+    //, 0 4px 4px 0 rgba(0, 0, 0, 0.2);    
+}
+
+@mixin arrow-box {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin arrow {
+    font-size: 1.2rem;
+    color: white;
+}

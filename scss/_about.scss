@@ -1,0 +1,37 @@
+@use "variables" as v;
+@use "mixins" as m;
+.aboutus {
+    background-color: white;
+    width: 100vw;
+    
+    .info {
+        @include m.centering;
+        
+        .intro {
+            @include m.centering; 
+            padding: 5%;
+            article {
+                background-color: lightgray;
+                border-radius:5px ;
+                padding: 10%;
+                margin: 5%;
+                font-size: 0.75rem;
+                text-align:justify;
+                figure {
+                    display: inline;
+                    .fa-quote-right {
+                        font-size: 1.7rem;
+                        display: inline;
+                    }
+                }
+            }
+        }
+        .btn--container {
+            @include m.arrow-box;
+            .fa-circle-down {
+                @include m.arrow; 
+                color: black;
+            }
+        }
+    }
+}

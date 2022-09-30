@@ -1,0 +1,137 @@
+.image {
+  width: 65%;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14pt;
+  font-family: "Times New Roman", Times, serif;
+}
+html .startpage-container, body .startpage-container {
+  background-image: url(../assets/nature1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+html .startpage-container header, body .startpage-container header {
+  background-color: rgba(255, 255, 255, 0.18);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+html .startpage-container header .container-fluid, body .startpage-container header .container-fluid {
+  padding: 0;
+}
+html .startpage-container header .container-fluid .navbar-toggler, body .startpage-container header .container-fluid .navbar-toggler {
+  border: none;
+}
+html .startpage-container header .container-fluid .navbar-toggler .fa-bars, body .startpage-container header .container-fluid .navbar-toggler .fa-bars {
+  color: white;
+}
+html .startpage-container .frontpage, body .startpage-container .frontpage {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html .startpage-container .frontpage .frontpage__text, body .startpage-container .frontpage .frontpage__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+html .startpage-container .frontpage .frontpage__text p, body .startpage-container .frontpage .frontpage__text p {
+  width: 75%;
+  text-align: center;
+}
+html .startpage-container .frontpage .btn--container, body .startpage-container .frontpage .btn--container {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html .startpage-container .frontpage .btn--container .fa-circle-down, body .startpage-container .frontpage .btn--container .fa-circle-down {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.aboutus {
+  background-color: white;
+  width: 100vw;
+}
+.aboutus .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus .info .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.aboutus .info .intro article {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10%;
+  margin: 5%;
+  font-size: 0.75rem;
+  text-align: justify;
+}
+.aboutus .info .intro article figure {
+  display: inline;
+}
+.aboutus .info .intro article figure .fa-quote-right {
+  font-size: 1.7rem;
+  display: inline;
+}
+.aboutus .info .btn--container {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutus .info .btn--container .fa-circle-down {
+  font-size: 1.2rem;
+  color: white;
+  color: black;
+}
+
+.lastpage {
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+.lastpage .contact-info {
+  width: 100vw;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.lastpage .contact-info section {
+  width: 60vw;
+  text-align: left;
+  margin: 5%;
+}
+.lastpage .contact-info section p {
+  font-size: 0.9rem;
+  margin: 3%;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,26 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+
+.lastpage {
+    width: 100vw;
+    background-color: black;
+    color: white;
+
+    .contact-info {
+        width: 100vw;
+        padding: 10%;
+        @include m.centering;
+
+        section {
+            width: 60vw;
+            text-align: left;
+            margin: 5%;
+            p {
+                font-size: 0.9rem;
+                margin: 3%;
+            }
+
+        }
+    }
+}
