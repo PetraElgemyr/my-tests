@@ -1,0 +1,25 @@
+@use "mixins" as m;
+
+html, body {
+    font-family:'Times New Roman', Times, serif, Arial, serif;
+    font-size: 12pt;  
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    
+    @include m.tablet {
+        font-size: 14pt;
+    }
+    @include m.deskop{
+        font-size: 16pt;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+  
+  

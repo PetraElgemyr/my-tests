@@ -1,5 +1,9 @@
-@use "mixins";
+@use "mixins" as m;
 
 .image {
-    @include mixins.picture;
+    @include m.picture;
+    @include m.tablet {
+        width: 55%;
+    
+    }
 }

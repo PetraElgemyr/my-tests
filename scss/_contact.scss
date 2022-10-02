@@ -1,24 +1,45 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-
 .lastpage {
     width: 100vw;
-    background-color: black;
-    color: white;
+    background-color: v.$primary;
+    color: v.$secondary;
+
 
     .contact-info {
+        @include m.centering;
         width: 100vw;
         padding: 10%;
-        @include m.centering;
+        @include m.tablet {
+            flex-direction: row;
+            height: 25vh;
+        }
+        @include m.deskop {
+            height: 15vh;
+        }
 
         section {
             width: 60vw;
             text-align: left;
             margin: 5%;
+            @include m.tablet {
+                height: 10vh;
+                padding: 0;
+                margin-bottom: 10%;
+            }
+
             p {
-                font-size: 0.9rem;
                 margin: 3%;
+
+                a {
+                    text-decoration: none;      
+                    color: v.$secondary;
+
+                    i {
+                        margin: 3%;
+                    }
+                }
             }
 
         }

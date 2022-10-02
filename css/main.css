@@ -1,16 +1,39 @@
+html, body {
+  font-family: "Times New Roman", Times, serif, Arial, serif;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 768px) {
+  html, body {
+    font-size: 14pt;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html, body {
+    font-size: 16pt;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .image {
   width: 65%;
   border-radius: 50%;
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.3);
+  margin: 5%;
+}
+@media screen and (min-width: 768px) {
+  .image {
+    width: 55%;
+  }
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 14pt;
-  font-family: "Times New Roman", Times, serif;
-}
-html .startpage-container, body .startpage-container {
+.startpage-container {
   background-image: url(../assets/nature1.jpg);
   background-size: cover;
   background-position: center;
@@ -18,63 +41,101 @@ html .startpage-container, body .startpage-container {
   width: 100vw;
   color: white;
 }
-html .startpage-container header, body .startpage-container header {
-  background-color: rgba(255, 255, 255, 0.18);
+.startpage-container header {
+  background-color: rgba(255, 255, 255, 0.1);
   height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
 }
-html .startpage-container header .container-fluid, body .startpage-container header .container-fluid {
-  padding: 0;
+.startpage-container header .navbar {
+  width: 100vw;
 }
-html .startpage-container header .container-fluid .navbar-toggler, body .startpage-container header .container-fluid .navbar-toggler {
-  border: none;
+.startpage-container header .navbar ul {
+  display: none;
+  padding: 3%;
 }
-html .startpage-container header .container-fluid .navbar-toggler .fa-bars, body .startpage-container header .container-fluid .navbar-toggler .fa-bars {
-  color: white;
+@media screen and (min-width: 768px) {
+  .startpage-container header .navbar ul {
+    display: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .startpage-container header .navbar ul li {
+    list-style: none;
+    padding: 1%;
+  }
+  .startpage-container header .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: border 0.2s;
+  }
+  .startpage-container header .navbar ul li a:hover {
+    border-color: white;
+    cursor: pointer;
+  }
 }
-html .startpage-container .frontpage, body .startpage-container .frontpage {
-  height: 90vh;
+.startpage-container .frontpage {
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-html .startpage-container .frontpage .frontpage__text, body .startpage-container .frontpage .frontpage__text {
+.startpage-container .frontpage .frontpage__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 80vh;
-  width: 100vw;
+  width: 90vw;
   flex-wrap: wrap;
 }
-html .startpage-container .frontpage .frontpage__text p, body .startpage-container .frontpage .frontpage__text p {
+.startpage-container .frontpage .frontpage__text .headline-text {
+  font-size: 1.5rem;
+  margin: 7%;
+}
+.startpage-container .frontpage .frontpage__text p {
   width: 75%;
   text-align: center;
 }
-html .startpage-container .frontpage .btn--container, body .startpage-container .frontpage .btn--container {
+.startpage-container .frontpage .btn--container {
   height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-html .startpage-container .frontpage .btn--container .fa-circle-down, body .startpage-container .frontpage .btn--container .fa-circle-down {
+.startpage-container .frontpage .btn--container .fa-circle-down {
   font-size: 1.2rem;
   color: white;
+}
+.startpage-container .frontpage .btn--container .fa-circle-down:hover {
+  cursor: pointer;
 }
 
 .aboutus {
   background-color: white;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .aboutus .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .aboutus .info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .aboutus .info .intro {
   display: flex;
@@ -83,32 +144,48 @@ html .startpage-container .frontpage .btn--container .fa-circle-down, body .star
   align-items: center;
   padding: 5%;
 }
-.aboutus .info .intro article {
+@media screen and (min-width: 768px) {
+  .aboutus .info .intro {
+    width: 50%;
+    padding: 2%;
+  }
+}
+.aboutus .info article {
   background-color: lightgray;
   border-radius: 5px;
   padding: 10%;
   margin: 5%;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   text-align: justify;
 }
-.aboutus .info .intro article figure {
+@media screen and (min-width: 1200px) {
+  .aboutus .info article {
+    font-size: 1rem;
+  }
+}
+.aboutus .info article .fa-quote-right {
+  font-size: 2rem;
   display: inline;
 }
-.aboutus .info .intro article figure .fa-quote-right {
-  font-size: 1.7rem;
-  display: inline;
+@media screen and (min-width: 1200px) {
+  .aboutus .info article .fa-quote-right {
+    font-size: 2.3rem;
+  }
 }
-.aboutus .info .btn--container {
+.aboutus .btn--container {
   height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.aboutus .info .btn--container .fa-circle-down {
+.aboutus .btn--container .fa-circle-down {
   font-size: 1.2rem;
   color: white;
   color: black;
+}
+.aboutus .btn--container .fa-circle-down:hover {
+  cursor: pointer;
 }
 
 .lastpage {
@@ -117,20 +194,44 @@ html .startpage-container .frontpage .btn--container .fa-circle-down, body .star
   color: white;
 }
 .lastpage .contact-info {
-  width: 100vw;
-  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  padding: 10%;
+}
+@media screen and (min-width: 768px) {
+  .lastpage .contact-info {
+    flex-direction: row;
+    height: 25vh;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lastpage .contact-info {
+    height: 15vh;
+  }
 }
 .lastpage .contact-info section {
   width: 60vw;
   text-align: left;
   margin: 5%;
 }
+@media screen and (min-width: 768px) {
+  .lastpage .contact-info section {
+    height: 10vh;
+    padding: 0;
+    margin-bottom: 10%;
+  }
+}
 .lastpage .contact-info section p {
-  font-size: 0.9rem;
+  margin: 3%;
+}
+.lastpage .contact-info section p a {
+  text-decoration: none;
+  color: white;
+}
+.lastpage .contact-info section p a i {
   margin: 3%;
 }
 
